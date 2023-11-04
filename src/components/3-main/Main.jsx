@@ -8,6 +8,7 @@ const Main = () => {
   const [arr, setArr] = useState(JSON.parse(JSON.stringify(myProjects)))
   const handleClick = (e)=>{
     setCurrentActive(e.target.value)
+
     if(e.target.value === 'all'){
       setArr(JSON.parse(JSON.stringify(myProjects)))
     }else {
@@ -36,20 +37,26 @@ const Main = () => {
                 animate={{ transform: "scale(1)" }}
                 transition={{type: 'spring', damping: 8, stiffness: 50}}
                 key={index} className='card'>
-                <img width={266} src={item.imgPath } alt=''/> 
+                <img src={item.imgPath } alt=''/> 
 
                 <div style={{width: '266px'}} className='box'>
                   <h1 className='title'>{item.projectTile} </h1>
-                  <p className='sub-title'>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                  <p className='sub-title'>{item.description}</p>
                   <div className='flex icons'>
                     <div style={{gap: '11px'}} className='flex '>
-                      <div className='icon-link'></div>
-                      <div className='icon-github' ></div>
+                      <a href={item.demo}>
+                        <div className='icon-link'></div>
+                      </a>
+                      <a href={item.git}>
+                        <div className='icon-github' ></div>
+                      </a>
                     </div>
-                    <a href='#' className='link flex'>
-                      more
-                      <span  className='icon-arrow_forward'></span>
-                    </a>
+                    {
+                      // <a href='#' className='link flex'>
+                      //   more
+                      //   <span  className='icon-arrow_forward'></span>
+                      // </a>
+                    }
                   </div>
                 </div>
               </motion.article>
