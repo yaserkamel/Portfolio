@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 const Hero = () => {
   const lottieRef = useRef()
   return (
-    <section className='hero flex'>
+    <section id='about' className='hero flex'>
       <div className='left-section '>
 
         <div className='parent-avatar flex'>
@@ -36,10 +36,19 @@ const Hero = () => {
         </p>
 
         <div className='all-icons flex'>
-          <div className='icon icon-twitter'></div>
-          <div className='icon icon-instagram'></div>
-          <div className='icon icon-github'></div>
-          <div className='icon icon-linkedin'></div>
+          {
+            // <div className='icon icon-twitter'></div>
+          }
+          <a href='https://www.linkedin.com/in/yaser-kamel'>
+            <div className='icon icon-linkedin'></div>
+          </a>
+
+          <a href='https://github.com/yaserkamel'>
+            <div className='icon icon-github'></div>
+          </a>
+          <a href='https://instagram.com/yaserkamell?igshid=NzZlODBkYWE4Ng=='>
+            <div className='icon icon-instagram'></div>
+          </a>
         </div>
 
       </div>

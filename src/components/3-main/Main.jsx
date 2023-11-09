@@ -18,7 +18,7 @@ const Main = () => {
     }
   }
   return (
-    <main className='flex'>
+    <main id='projects' className='flex'>
       
       <section className='  flex left-section'>
         <button value='all' onClick={(e)=> handleClick(e)} className={currentActive === 'all' ? 'active' : null}>all project</button>
@@ -44,12 +44,19 @@ const Main = () => {
                   <p className='sub-title'>{item.description}</p>
                   <div className='flex icons'>
                     <div style={{gap: '11px'}} className='flex '>
-                      <a href={item.demo}>
-                        <div className='icon-link'></div>
-                      </a>
-                      <a href={item.git}>
-                        <div className='icon-github' ></div>
-                      </a>
+
+                      <div className="tooltip">
+                        <span className="tooltiptext">Demo</span>
+                        <a href={item.demo}>
+                          <div className='icon-link'></div>
+                        </a>
+                      </div>
+                      <div className="tooltip">
+                        <span className="tooltiptext">Github</span>
+                        <a href={item.git}>
+                          <div className='icon-github'></div>
+                        </a>
+                      </div>
                     </div>
                     {
                       // <a href='#' className='link flex'>

@@ -4,23 +4,25 @@ footer.flex {
   padding-bottom: 1.9rem;
 }
 
-footer.flex ul {
-  gap: 1rem;
-}
-footer.flex ul a{
-  color: var(--subtitle);
-  font-size: 0.9rem;
-  transition: 0.2s;
-  font-weight: 400;
-}
-footer.flex ul a:hover{
-  color: var(--blue);
-  font-size: 1rem;
-  font-weight: 500;
-}
 
 footer.flex p {
   color: rgb(113, 113, 112);
+}
+
+footer.flex .all-icons {
+  font-size: 1.3rem;
+  gap: 1.5rem;
+  color: var(--subtitle);
+}
+
+footer.flex .all-icons a {
+  color: var(--subtitle);
+}
+footer.flex .all-icons .icon:hover { 
+  font-size: 1.4rem;
+  transition: 0.3s;
+  cursor: pointer;
+  color: var(--icon-hover);
 }
 
 
